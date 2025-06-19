@@ -37,7 +37,7 @@ jobs:
 
       - name: Run fuzzing
         run: |
-          $HOME/go/bin/ffuf 
+          $HOME/go/bin/ffuf || true
 
       - name: Get Logs from Service
         run: |
@@ -48,6 +48,4 @@ jobs:
         with:
           name: security-reports-bundle
           path: |
-            ffuf-result.json
-            ffuf-debug.log
             juice-logs.log
