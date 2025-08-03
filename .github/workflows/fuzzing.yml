@@ -42,7 +42,7 @@ jobs:
 
       - name: Get Logs from Service
         run: |
-          docker logs $(docker ps -q) > juice-logs.log
+          docker logs $(docker ps -q) &> juice-logs.log
 
       - name: Upload results
         uses: actions/upload-artifact@v4
